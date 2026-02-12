@@ -32,9 +32,7 @@ Run the app: `npm run dev`
 
 Open [Base44.com](http://Base44.com) and click on Publish.
 
-**Docs & Support**
-
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
+**App Link & Support**
 
 Support: [https://app.base44.com/support](https://app.base44.com/support)
 
