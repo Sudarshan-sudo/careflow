@@ -123,3 +123,11 @@ This repository does not include a license file. Add a `LICENSE` if you plan to 
 ## App Link
 
 you can open the app by clicking on the https://quaint-care-flow-hub.base44.app
+
+## Video And Photo Reference
+
+Drive link: https://drive.google.com/drive/folders/1rgB7BcUNdzBRSq2SgEJf3X5QbrIrKZlR
+
+## Note
+
+once you sign-up with a gmail with a paticular role like (Doctor,nursing, pharmacy, diagnostics and admin). you can not change role by using that gmail.
