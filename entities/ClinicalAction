@@ -1,0 +1,121 @@
+{
+  "name": "ClinicalAction",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "description": "Reference to patient record ID"
+    },
+    "action_type": {
+      "type": "string",
+      "enum": [
+        "Prescription",
+        "Diagnostic Test",
+        "Referral",
+        "Care Instruction"
+      ],
+      "description": "Type of clinical action"
+    },
+    "title": {
+      "type": "string",
+      "description": "Short title of the action"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "Accepted",
+        "In Progress",
+        "Processing",
+        "Dispensed",
+        "Administered",
+        "Monitoring",
+        "Completed",
+        "Cancelled"
+      ],
+      "default": "Pending"
+    },
+    "assigned_department": {
+      "type": "string",
+      "enum": [
+        "Doctor",
+        "Diagnostics",
+        "Pharmacy",
+        "Nursing"
+      ],
+      "description": "Department responsible for this action"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High",
+        "Urgent"
+      ],
+      "default": "Medium"
+    },
+    "medications": {
+      "type": "array",
+      "description": "List of medications for prescriptions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "dosage": {
+            "type": "string"
+          },
+          "frequency": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "test_type": {
+      "type": "string",
+      "description": "Type of diagnostic test"
+    },
+    "test_result": {
+      "type": "string",
+      "description": "Result of diagnostic test"
+    },
+    "result_file_url": {
+      "type": "string",
+      "description": "URL to uploaded result file"
+    },
+    "referral_to": {
+      "type": "string",
+      "description": "Referral department/specialist"
+    },
+    "department_notes": {
+      "type": "string",
+      "description": "Notes from the department handling this action"
+    },
+    "ordered_by": {
+      "type": "string",
+      "description": "Name/email of person who created the action"
+    },
+    "updated_by": {
+      "type": "string",
+      "description": "Name/email of person who last updated"
+    },
+    "updated_by_role": {
+      "type": "string",
+      "description": "Role of person who last updated"
+    }
+  },
+  "required": [
+    "patient_id",
+    "action_type",
+    "title"
+  ]
+}

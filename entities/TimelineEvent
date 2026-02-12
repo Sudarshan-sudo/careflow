@@ -1,0 +1,56 @@
+{
+  "name": "TimelineEvent",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "description": "Reference to patient record ID"
+    },
+    "action_id": {
+      "type": "string",
+      "description": "Reference to clinical action ID"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "Action Created",
+        "Status Update",
+        "Result Uploaded",
+        "Note Added",
+        "Vitals Recorded",
+        "Patient Status Changed"
+      ],
+      "description": "Type of timeline event"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "performed_by": {
+      "type": "string",
+      "description": "Email of the user who performed this"
+    },
+    "performed_by_role": {
+      "type": "string",
+      "enum": [
+        "Doctor",
+        "Nurse",
+        "Pharmacy",
+        "Diagnostics",
+        "Admin"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional event data like vitals",
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "patient_id",
+    "event_type",
+    "title"
+  ]
+}

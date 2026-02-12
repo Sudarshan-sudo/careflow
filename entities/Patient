@@ -1,0 +1,71 @@
+{
+  "name": "Patient",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "description": "Unique patient identifier (e.g. P-10001)"
+    },
+    "full_name": {
+      "type": "string",
+      "description": "Patient full name"
+    },
+    "age": {
+      "type": "number",
+      "description": "Patient age"
+    },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "Male",
+        "Female",
+        "Other"
+      ]
+    },
+    "blood_group": {
+      "type": "string",
+      "enum": [
+        "A+",
+        "A-",
+        "B+",
+        "B-",
+        "AB+",
+        "AB-",
+        "O+",
+        "O-"
+      ]
+    },
+    "diagnosis": {
+      "type": "string",
+      "description": "Primary diagnosis"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Admitted",
+        "Under Diagnosis",
+        "Treatment Ongoing",
+        "Discharged"
+      ],
+      "default": "Admitted"
+    },
+    "room_number": {
+      "type": "string"
+    },
+    "attending_doctor": {
+      "type": "string",
+      "description": "Name of attending doctor"
+    },
+    "admission_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "full_name",
+    "patient_id"
+  ]
+}
