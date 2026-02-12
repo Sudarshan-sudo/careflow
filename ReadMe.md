@@ -120,12 +120,6 @@ These scripts are defined in `package.json`.
 
 This repository does not include a license file. Add a `LICENSE` if you plan to publish or open source the code.
 
----
+## App Link
 
-If you want, I can also:
-
-- Add a small CONTRIBUTING.md with development conventions.
-- Add a minimal `Makefile` or npm script wrapper for common dev tasks.
-- Add a short README section with how to run the project inside the Base44 builder specifically.
-
-Tell me which of those you'd like and I'll add it.
+you can open the app by clicking on the https://quaint-care-flow-hub.base44.app
